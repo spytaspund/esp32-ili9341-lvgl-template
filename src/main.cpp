@@ -22,7 +22,7 @@ void IRAM_ATTR onTimer();
 void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p);
 void my_touchpad_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data);
 void timinit();
-void lv_example_list_1(void);
+void lv_example_list_1(void); // Example code
 
 static lv_obj_t * list1;
 
@@ -52,13 +52,14 @@ void setup(){
   indev_drv.type = LV_INDEV_TYPE_POINTER;
   indev_drv.read_cb = my_touchpad_read;
   lv_indev_drv_register(&indev_drv);
-  lv_example_list_1();
+  lv_example_list_1(); // Example code
 }
 
 void loop(){
   lv_timer_handler();       // woah, don't delete this line!
 }
 
+// Example code - you can delete this function if you wish.
 void lv_example_list_1(void)
 {
     /*Create a list*/
